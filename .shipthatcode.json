@@ -1,0 +1,66 @@
+{
+  "course": "go-fundamentals",
+  "language": "go",
+  "language_id": 60,
+  "entrypoint": "main.go",
+  "version": 1,
+  "content_hash": "b4a5964de2809e53",
+  "lessons": [
+    {
+      "slug": "hello-world",
+      "tests_hash": "cbc8d4901b33"
+    },
+    {
+      "slug": "variables-and-types",
+      "tests_hash": "4ccc141f8a2f"
+    },
+    {
+      "slug": "numbers-and-math",
+      "tests_hash": "69adc0cc5957"
+    },
+    {
+      "slug": "string-basics",
+      "tests_hash": "1c56fc7084d6"
+    },
+    {
+      "slug": "formatted-printing",
+      "tests_hash": "eb06fa6128a5"
+    },
+    {
+      "slug": "conditionals",
+      "tests_hash": "1720a777f726"
+    },
+    {
+      "slug": "loops",
+      "tests_hash": "d936b3338ca8"
+    },
+    {
+      "slug": "functions",
+      "tests_hash": "4e6757737a4d"
+    },
+    {
+      "slug": "errors",
+      "tests_hash": "934474669808"
+    },
+    {
+      "slug": "slices",
+      "tests_hash": "824618d94a04"
+    },
+    {
+      "slug": "maps",
+      "tests_hash": "6da2ebbae97c"
+    },
+    {
+      "slug": "structs",
+      "tests_hash": "c720ce1dc898"
+    },
+    {
+      "slug": "pointers",
+      "tests_hash": "cde26136fad3"
+    },
+    {
+      "slug": "multiple-returns",
+      "tests_hash": "8081947e5296"
+    }
+  ]
+}
