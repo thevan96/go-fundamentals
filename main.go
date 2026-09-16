@@ -1,20 +1,12 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-)
+import "fmt"
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	if scanner.Scan() {
-		line := scanner.Text()
-		fmt.Println(strings.ToUpper(line))
-	}
-
-	if err := scanner.Err(); err != nil {
-		os.Exit(1)
-	}
+	var name string
+	var age int
+	fmt.Scan(&name)
+	fmt.Scan(&age)
+	greetings := fmt.Sprintf("Hi, %s! You are %d years old.", name, age)
+	fmt.Println(greetings)
 }
