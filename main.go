@@ -1,13 +1,27 @@
 package main
 
-import "fmt"
-
-func square(n int) int {
-	return n * n
-}
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
 
 func main() {
-	var n int
-	fmt.Scan(&n)
-	fmt.Println(square(n))
+	scanner := bufio.NewScanner(os.Stdin)
+	if !scanner.Scan() {
+		if scanner.Err() != nil {
+			os.Exit(1)
+		}
+
+		return
+	}
+
+	numRaw := scanner.Text()
+	if num, err := strconv.Atoi(numRaw); err != nil {
+		fmt.Println("bad")
+		return
+	} else {
+		fmt.Printf("ok %d\n", num)
+	}
 }
