@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
+func square(n int) int {
+	return n * n
+}
+
 func main() {
 	var n int
 	fmt.Scan(&n)
-	var sum int
-	for i := 1; i <= n; i++ {
-		sum += i
-	}
-	fmt.Println(sum)
+	fmt.Println(square(n))
 }
