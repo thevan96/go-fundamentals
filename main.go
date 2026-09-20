@@ -3,10 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	var name string
-	var age int
-	fmt.Scan(&name)
-	fmt.Scan(&age)
-	greetings := fmt.Sprintf("Hi, %s! You are %d years old.", name, age)
-	fmt.Println(greetings)
+	var n int
+	fmt.Scan(&n)
+	switch {
+	case n%15 == 0:
+		fmt.Println("FizzBuzz")
+	case n%3 == 0:
+		fmt.Println("Fizz")
+	case n%5 == 0:
+		fmt.Println("Buzz")
+	default:
+		fmt.Println(n)
+	}
 }
