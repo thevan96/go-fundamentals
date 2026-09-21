@@ -1,24 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	var nums []int
-	var x int
+	frequencies := map[string]int{}
+	var word string
 
 	for {
-		_, err := fmt.Scan(&x)
+		_, err := fmt.Scan(&word)
 		if err != nil {
 			break
 		}
-		nums = append(nums, x)
+		frequencies[word]++
 	}
 
-	maxNum := nums[0]
-	for i := 1; i < len(nums); i++ {
-		if nums[i] > maxNum {
-			maxNum = nums[i]
+	different := len(frequencies)
+	once := 0
+	for _, v := range frequencies {
+		if v == 1 {
+			once++
 		}
 	}
-	fmt.Println(maxNum)
+	fmt.Println(different)
+	fmt.Println(once)
 }
