@@ -1,27 +1,24 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strconv"
-)
+import "fmt"
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	if !scanner.Scan() {
-		if scanner.Err() != nil {
-			os.Exit(1)
+	var nums []int
+	var x int
+
+	for {
+		_, err := fmt.Scan(&x)
+		if err != nil {
+			break
 		}
-
-		return
+		nums = append(nums, x)
 	}
 
-	numRaw := scanner.Text()
-	if num, err := strconv.Atoi(numRaw); err != nil {
-		fmt.Println("bad")
-		return
-	} else {
-		fmt.Printf("ok %d\n", num)
+	maxNum := nums[0]
+	for i := 1; i < len(nums); i++ {
+		if nums[i] > maxNum {
+			maxNum = nums[i]
+		}
 	}
+	fmt.Println(maxNum)
 }
