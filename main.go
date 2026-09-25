@@ -1,33 +1,25 @@
 package main
 
 import (
-	"bufio"
+	"errors"
 	"fmt"
-	"os"
-	"strconv"
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	scanner.Split(bufio.ScanWords)
-	var nums []int
-	for scanner.Scan() {
-		num, _ := strconv.Atoi(scanner.Text())
-		nums = append(nums, num)
-		if scanner.Err() != nil {
-			break
-		}
-	}
-
-	for i := range nums {
-		increment(&nums[i])
-	}
-
-	for _, num := range nums {
-		fmt.Println(num)
+	var a, b int
+	fmt.Scan(&a)
+	fmt.Scan(&b)
+	if rs, err := safeDivide(a, b); err != nil {
+		fmt.Printf("error: %s\n", err)
+	} else {
+		fmt.Printf("result: %d\n", rs)
 	}
 }
 
-func increment(n *int) {
-	*n++
+func safeDivide(a, b int) (int, error) {
+	if b == 0 {
+		return 0, errors.New("divide by zero")
+	}
+
+	return a / b, nil
 }
