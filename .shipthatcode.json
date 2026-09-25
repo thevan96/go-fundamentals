@@ -4,7 +4,7 @@
   "language_id": 60,
   "entrypoint": "main.go",
   "version": 1,
-  "content_hash": "2af28c48cce058f5",
+  "content_hash": "1c1348e8c05e7185",
   "lessons": [
     {
       "slug": "hello-world",
@@ -24,7 +24,7 @@
     },
     {
       "slug": "formatted-printing",
-      "tests_hash": "eb06fa6128a5"
+      "tests_hash": "651a67753846"
     },
     {
       "slug": "conditionals",
